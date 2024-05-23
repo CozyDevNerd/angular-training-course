@@ -1,10 +1,18 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-lg-6">
-      <app-receipe-list></app-receipe-list>
+      <app-receipe-list
+      (recipeWasSelected)="selectedReceipe = $event"
+      ></app-receipe-list>
     </div>
     <div class="col-sm-12 col-lg-6">
-      <app-receipe-detail></app-receipe-detail>
+      <app-receipe-detail
+      *ngIf="selectedReceipe; else infoText"
+      [receipe]="selectedReceipe"
+      ></app-receipe-detail>
+      <ng-template #infoText>
+        <p>Please select a template</p>
+      </ng-template>
     </div>
   </div>
 </div>

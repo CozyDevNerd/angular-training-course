@@ -6,18 +6,10 @@
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <a href="#" class="recipe-list-item clearfix"
-    *ngFor="let receipe of receipes">
-      <div class="card w-25">
-        <img
-          [src]="receipe.imagePath"
-          alt="{{ receipe.name }}" class="img-fluid" />
-        <div class="card-body">
-          <h4 class="list-item-heading">{{ receipe.name }}</h4>
-          <p class="list-item-desc">{{ receipe.description }}</p>
-        </div>
-      </div>
-    </a>
-    <app-receipe-item></app-receipe-item>
+    <app-receipe-item
+      *ngFor="let receipeEl of receipes"
+      [receipe]="receipeEl"
+      (recipeSelected)="onRecipeSelected(receipeEl)"
+    ></app-receipe-item>
   </div>
 </div>

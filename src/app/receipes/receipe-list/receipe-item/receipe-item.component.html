@@ -1,1 +1,13 @@
-<p>receipe-item works!</p>
+<a href="#" class="recipe-list-item clearfix"
+(click)="onselect()"
+>
+  <div class="card w-25">
+    <img
+      [src]="receipe.imagePath"
+      alt="{{ receipe.name }}" class="img-fluid" />
+    <div class="card-body">
+      <h4 class="list-item-heading">{{ receipe.name }}</h4>
+      <p class="list-item-desc">{{ receipe.description }}</p>
+    </div>
+  </div>
+</a>

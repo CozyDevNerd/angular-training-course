@@ -12,13 +12,14 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recipes</a>
+              <a class="nav-link" href="#" (click)="onselect('recipe')">Recipes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shopping list</a>
+              <a class="nav-link" href="#" (click)="onselect('shopping-list')">Shopping list</a>
             </li>
           </ul>
-          <div class="dropdown">
+          <div class="dropdown"
+          appDropdown>
             <a class="btn btn-info dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Actions</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item">Save Data</a></li>
